@@ -9,4 +9,5 @@ class User(Base):
     userName = Column(String(150), unique = True, index = True, nullable = False)
     email = Column(String(255), unique=True, index=True, nullable=False)
     hashed_password = Column(String(255), nullable=False)
+    role = Column(String(20), default="employee")
     is_active = Column(Boolean, default=True)
